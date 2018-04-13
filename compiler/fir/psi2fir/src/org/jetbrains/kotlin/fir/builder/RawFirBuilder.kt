@@ -553,6 +553,7 @@ class RawFirBuilder(val session: FirSession) {
                         typeReference,
                         isNullable,
                         unwrappedElement.receiverTypeReference.convertSafe(),
+                        // TODO: probably implicit type should not be here
                         unwrappedElement.returnTypeReference.toFirOrImplicitType()
                     )
                     for (valueParameter in unwrappedElement.parameters) {
